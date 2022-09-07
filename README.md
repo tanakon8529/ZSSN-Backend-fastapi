@@ -1,10 +1,11 @@
 ## BackendInterview
-#### Task 1 REST
+-----------------------
+#### Task 1 [ GRAPH QL ]
 1. Import data to database.
 
 2. Change type primary key from "int" to "UUID" and make sturture for support 2 language.
 
-3. Generate REST API by ORM format output genaral REST API method (GET POST PUT PATCH and DELETE) 
+3. Generate by ORM format output genaral method (GET POST PUT PATCH and DELETE) 
     ```
     GET — R(etrieve) 
     POST — C(reate) 
@@ -13,29 +14,86 @@
     DELETE — D(elete) 
     ```  
 
-4. This able serch and filter
+4. This able serch and filter.
 
+5. Genarate Test Scipt for test API.
+
+------------------------------------
         
-#### Task 2 
-In this challenge you should build an API for an application that stores and manages investments, it should have the following features
-```
-    1. __Creation__ of an investment with an owner, a creation date and an amount.
-    1. The creation date of an investment can be today or a date in the past.
-    2. An investment should not be or become negative.
-    2. __View__ of an investment with its initial amount and expected balance.
-        1. Expected balance should be the sum of the invested amount and the [gains][].
-        2. If an investment was already withdrawn then the balance must reflect the gains of that investment
-    3. __Withdrawal__ of a investment.
-        1. The withdraw will always be the sum of the initial amount and its gains,
-        partial withdrawn is not supported.
-        2. Withdrawals can happen in the past or today, but can't happen before the investment creation or the future.
-        3. [Taxes][taxes] need to be applied to the withdrawals before showing the final value.
-    4. __List__ of a person's investments
-        1. This list should have pagination.
+#### Task 2 [ REST API ]
+## Problem Description
 
-```
-#### Task 3 
-1.
-2.
-3
-4.
+ZSSN (Zombie Survival Social Network). The world as we know it has fallen into an apocalyptic scenario. A laboratory-made virus is transforming human beings and animals into zombies, hungry for fresh flesh.
+
+You, as a zombie resistance member (and the last survivor who knows how to code), was designated to develop a system to share resources between non-infected humans.
+
+## Requirements
+
+You will develop a ***REST API*** (yes, we care about architecture design even in the midst of a zombie apocalypse!), which will store information about the survivors, as well as the resources they own.
+
+In order to accomplish this, the API must fulfill the following use cases:
+
+- **Add survivors to the database**
+
+  A survivor must have a *name*, *age*, *gender* and *last location (latitude, longitude)*.
+
+  A survivor also has an inventory of resources of their own property (which you need to declare when upon the registration of the survivor).
+
+- **Update survivor location**
+
+  A survivor must have the ability to update their last location, storing the new latitude/longitude pair in the base (no need to track locations, just replacing the previous one is enough).
+
+- **Flag survivor as infected**
+
+  In a chaotic situation like that, it's inevitable that a survivor may get contaminated by the virus.  When this happens, we need to flag the survivor as infected.
+
+  An infected survivor cannot trade with others, can't access/manipulate their inventory, nor be listed in the reports (infected people are kinda dead anyway, see the item on reports below).
+
+  **A survivor is marked as infected when at least three other survivors report their contamination.**
+
+  When a survivor is infected, their inventory items become inaccessible (they cannot trade with others).
+
+- **Survivors cannot Add/Remove items from inventory**
+
+  Their belongings must be declared when they are first registered in the system. After that they can only change their inventory by means of trading with other survivors.
+
+  The items allowed in the inventory are described above in the first feature.
+
+- **Trade items**:
+
+  Survivors can trade items among themselves.
+
+  To do that, they must respect the price table below, where the value of an item is described in terms of points.
+
+  Both sides of the trade should offer the same amount of points. For example, 1 Water and 1 Medication (1 x 4 + 1 x 2) is worth 6 ammunition (6 x 1) or 2 Food items (2 x 3).
+
+  The trades themselves need not to be stored, but the items must be transferred from one survivor to the other.
+
+| Item         | Points   |
+|--------------|----------|
+| 1 Water      | 4 points |
+| 1 Food       | 3 points |
+| 1 Medication | 2 points |
+| 1 Ammunition | 1 point  |
+
+- **Reports**
+
+  The API must offer the following reports:
+
+    1. Percentage of infected survivors.
+    1. Percentage of non-infected survivors.
+    3. Average amount of each kind of resource by survivor (e.g. 5 waters per survivor)
+    4. Points lost because of infected survivor.
+    5. Genarate Test Scipt for test API.
+
+---------------------------------------
+
+#### Task 3
+
+Genarate Web Page for show data fron 2 task using HTTPS Protocal 
+
+1. Run Task 1 and 2 and this task such as diiference host (recommend using Docker)
+
+2. Create simple page to Show and management page from 2 API over HTTPS Protocal
+
+3. Able Create Read Update Delete data from API.
