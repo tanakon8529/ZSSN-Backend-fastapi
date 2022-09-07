@@ -94,6 +94,6 @@ Genarate Web Page for show data fron 2 task using HTTPS Protocal
 
 1. Run Task 1 and 2 and this task such as diiference host (recommend using Docker)
 
-2. Create simple page to Show and management page from 2 API over HTTPS Protocal
+2. Create simple page for show and management 2 API over HTTPS Protocal
 
 3. Able Create Read Update Delete data from API.
