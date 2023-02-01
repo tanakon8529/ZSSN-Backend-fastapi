@@ -1,0 +1,35 @@
+# sqlalchemy & db
+pyodbc==4.0.32
+psycopg2-binary==2.9.4
+greenlet==1.1.2
+sqlalchemy==1.4.31
+urllib3==1.25.9
+
+# uvicorn
+uvicorn==0.17.5
+asgiref==3.4.1
+h11==0.12.0
+click==8.0.1
+
+# gunicorn & univorn
+gunicorn==20.1.0
+uvicorn==0.17.5
+h11==0.12.0
+click==8.0.1
+asgiref==3.4.1
+
+# jwt authen
+pyjwt==2.3.0
+
+# fastapi
+fastapi==0.74.1
+pydantic==1.8.2
+typing-extensions==3.10.0.2
+starlette==0.17.1
+
+# env & log
+loguru==0.6.0
+python-dotenv==0.19.2
+setuptools==67.0.0
+python-multipart==0.0.5
+six==1.16.0
